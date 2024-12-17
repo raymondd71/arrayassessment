@@ -10379,3 +10379,10 @@ const cards = [
 ];
 
 //1) while chaining array methods filter the array to only include creatures, then sort that array by CMC (Converted Mana Cost) value and print each creature one line at a time, printing the creatures name and CMC value
+
+function creature() {
+  cards
+    .filter((thing) => thing.types.includes("Creature"))
+    .sort((least, greatest) => least.cmc - greatest.cmc)
+    .forEach((thing) => console.log(thing.name && thing.cmc));
+}

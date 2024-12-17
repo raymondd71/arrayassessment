@@ -23010,5 +23010,17 @@ let data = [
   },
 ];
 //1 print each card where the series set is "HeartGold & SoulSilver"
+function displayseries() {
+  data
+    .filter((thing) => thing.set.series === "HeartGold & SoulSilver")
+    .forEach((thing) => console.log(thing));
+}
+displayseries();
 
 //2 print each card name where the card type "includes" Fire
+function displaytype() {
+  data
+    .filter((thing) => thing.types.includes("Fire"))
+    .forEach((thing) => console.log(thing.id));
+}
+displaytype();
